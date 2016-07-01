@@ -6,6 +6,8 @@ I wanted to try out React.js and tried to setup a somewhat realistic project. It
 
 ![demo video](demo.gif)
 
+![demo video unit tests](unittests.gif)
+
 ## Available Commands
 
 Start a watch process for development:
