@@ -4,7 +4,11 @@ I wanted to try out React.js and tried to setup a somewhat realistic project. It
 
 ## Demonstration
 
+### Browser
+
 ![demo video](demo.gif)
+
+### Unit Tests
 
 ![demo video unit tests](unittests.gif)
 
