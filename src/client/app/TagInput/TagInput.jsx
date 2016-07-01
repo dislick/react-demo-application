@@ -12,7 +12,10 @@ export default class TagInput extends React.Component {
   }
 
   transformToHashtag(inputText) {
-    return inputText.split(' ').map(t => t[0].toUpperCase() + t.substring(1)).join('');
+    return inputText.split(' ').map(tag => {
+      if (!tag[0]) return;
+      return tag[0].toUpperCase() + tag.substring(1)
+    }).join('');
   }
 
   handleEnter(event) {
