@@ -1,0 +1,50 @@
+@keyframes flyIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+$tag-color: rgb(31, 134, 209);
+
+.tag {
+  display: inline-block;
+  border: 1px solid $tag-color;
+  padding: 6px 16px;
+  border-radius: 15px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  animation: flyIn 1s ease-in;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  p {
+    display: inline-block;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    margin: 0;
+    color: $tag-color;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  span.remove-symbol {
+    margin-left: 8px;
+    color: red;
+    cursor: pointer;
+  }
+}
