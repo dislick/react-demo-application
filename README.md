@@ -2,6 +2,10 @@
 
 I wanted to try out React.js and tried to setup a somewhat realistic project. It uses webpack to bundle all dependencies into one nice JavaScript file, obviously supports JSX and has unit tests.
 
+## Demonstration
+
+![demo video](demo.gif)
+
 ## Available Commands
 
 Start a watch process for development:
