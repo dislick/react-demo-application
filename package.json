@@ -24,6 +24,7 @@
     "babel-register": "^6.9.0",
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
+    "css-modules-require-hook": "^4.0.1",
     "enzyme": "^2.3.0",
     "jsdom": "^9.3.0",
     "mocha": "^2.5.3",

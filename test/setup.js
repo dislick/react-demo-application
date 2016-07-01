@@ -18,3 +18,12 @@ global.navigator = {
 };
 
 documentRef = document;
+
+// preprocess css modules to avoid errors in mocha
+var hook = require('css-modules-require-hook');
+var sass = require('node-sass');
+
+hook({
+  extensions: ['.scss'],
+  preprocessCss: data => sass.renderSync({ data }).css
+});
