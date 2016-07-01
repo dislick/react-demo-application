@@ -27,7 +27,7 @@ export default class TagInput extends React.Component {
 
   render() {
     return (
-      <input type="text" className="tag-input" onChange={this.handleChange.bind(this)} onKeyPress={this.handleEnter.bind(this)}></input>
+      <input type="text" className="tag-input" onChange={this.handleChange.bind(this)} onKeyPress={this.handleEnter.bind(this)} placeholder="Type here..."></input>
     );
   }
 }

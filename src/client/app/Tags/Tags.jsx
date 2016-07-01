@@ -1,6 +1,8 @@
 import React from 'react';
 import TagInput from '../TagInput/TagInput.jsx';
 import TagList from '../TagList/TagList.jsx';
+import './Tags.scss';
+import { Link } from 'react-router';
 
 export default class Tags extends React.Component {
   constructor(props) {
@@ -28,6 +30,7 @@ export default class Tags extends React.Component {
       <div>
         <TagInput addTag={this.addTag.bind(this)} />
         <TagList tags={this.state.tags} removeTag={this.removeTag.bind(this)} />
+        <Link to="/about" className="about-link">About</Link>
       </div>
     );
   }
