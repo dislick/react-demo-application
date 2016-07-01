@@ -8,7 +8,7 @@ class App extends React.Component {
   render() {
     return (
       <Router history={hashHistory}>
-        <Route path="/" component={Tags}></Route>
+        <Route path="/" component={Tags} />
         <Route path="/about" component={About} />
       </Router>
     );
