@@ -17,3 +17,8 @@ export default class TagList extends React.Component {
     );
   }
 }
+
+TagList.propTypes = {
+  tags: React.PropTypes.array.isRequired,
+  removeTag: React.PropTypes.func.isRequired
+};

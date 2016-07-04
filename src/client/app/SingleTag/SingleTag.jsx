@@ -23,3 +23,9 @@ export default class SingleTag extends React.Component {
     );
   }
 }
+
+SingleTag.propTypes = {
+  title: React.PropTypes.string.isRequired,
+  removeTag: React.PropTypes.func.isRequired,
+  index: React.PropTypes.number.isRequired
+};

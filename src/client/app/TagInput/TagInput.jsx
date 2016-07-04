@@ -31,3 +31,7 @@ export default class TagInput extends React.Component {
     );
   }
 }
+
+TagInput.propTypes = {
+  addTag: React.PropTypes.func.isRequired
+};

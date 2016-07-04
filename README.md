@@ -1,6 +1,6 @@
 # react-demo-application
 
-I wanted to try out React.js and tried to setup a somewhat realistic project. It uses webpack to bundle all dependencies into one nice JavaScript file, obviously supports JSX and has unit tests.
+I wanted to try out React.js and tried to setup a somewhat realistic project. It uses webpack to bundle all dependencies into one nice JavaScript file, obviously supports JSX, has unit tests, and uses ESLint.
 
 ## Demonstration
 
@@ -30,6 +30,12 @@ Run unit tests:
 
 ```
 npm test
+```
+
+Run ESLint:
+
+```
+npm run lint
 ```
 
 Open `src/client/index.html` in your browser to see the React application!

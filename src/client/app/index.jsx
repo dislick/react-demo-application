@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router'
+import { Router, Route, hashHistory } from 'react-router';
 import { render } from 'react-dom';
 import Tags from './Tags/Tags.jsx';
 import About from './About/About.jsx';
