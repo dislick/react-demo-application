@@ -39,7 +39,9 @@
     "sass-loader": "^4.0.0",
     "should": "^9.0.2",
     "sinon": "^1.17.4",
+    "source-map-loader": "^0.1.5",
     "style-loader": "^0.13.1",
+    "ts-loader": "^0.8.2",
     "webpack": "^1.13.1"
   }
 }

@@ -1,8 +1,14 @@
-import React from 'react';
+import * as React from 'react';
 import './SingleTag.scss';
 
-export default class SingleTag extends React.Component {
-  constructor(props) {
+export interface SingleTagProps {
+  title: string,
+  index?: number,
+  removeTag?: (index: number) => void
+}
+
+export class SingleTag extends React.Component<SingleTagProps, {}> {
+  constructor(props: SingleTagProps) {
     super(props);
   }
 
@@ -23,9 +29,3 @@ export default class SingleTag extends React.Component {
     );
   }
 }
-
-SingleTag.propTypes = {
-  title: React.PropTypes.string.isRequired,
-  removeTag: React.PropTypes.func.isRequired,
-  index: React.PropTypes.number.isRequired
-};

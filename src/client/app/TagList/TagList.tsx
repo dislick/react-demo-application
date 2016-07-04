@@ -1,9 +1,14 @@
-import React from 'react';
-import SingleTag from '../SingleTag/SingleTag.jsx';
+import * as React from 'react';
+import { SingleTag, SingleTagProps } from '../SingleTag/SingleTag';
 import './TagList.scss';
 
-export default class TagList extends React.Component {
-  constructor(props) {
+export interface TagListProps {
+  tags: SingleTagProps[],
+  removeTag: () => void
+}
+
+export default class TagList extends React.Component<TagListProps, {}> {
+  constructor(props: TagListProps) {
     super(props);
   }
 
@@ -17,8 +22,3 @@ export default class TagList extends React.Component {
     );
   }
 }
-
-TagList.propTypes = {
-  tags: React.PropTypes.array.isRequired,
-  removeTag: React.PropTypes.func.isRequired
-};

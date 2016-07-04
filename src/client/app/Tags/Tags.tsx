@@ -1,24 +1,29 @@
-import React from 'react';
-import TagInput from '../TagInput/TagInput.jsx';
-import TagList from '../TagList/TagList.jsx';
+import * as React from 'react';
+import TagInput from '../TagInput/TagInput';
+import TagList from '../TagList/TagList';
+import { SingleTagProps } from '../SingleTag/SingleTag';
 import './Tags.scss';
 import { Link } from 'react-router';
 
-export default class Tags extends React.Component {
-  constructor(props) {
+interface TagsState {
+  tags: SingleTagProps[]
+}
+
+export default class Tags extends React.Component<{}, TagsState> {
+  constructor(props: any) {
     super(props);
     this.state = {
       tags: [{ title: 'PatrickForPresident' }]
     }
   }
 
-  addTag(title) {
+  addTag(title: string) {
     this.setState({
       tags: this.state.tags.concat([{ title }])
     });
   }
 
-  removeTag(index) {
+  removeTag(index: number) {
     this.state.tags.splice(index, 1);
     this.setState({
       tags: this.state.tags
