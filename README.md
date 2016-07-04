@@ -32,4 +32,4 @@ Run unit tests:
 npm test
 ```
 
-Open `src/client/index.js` in your browser to see the React application!
+Open `src/client/index.html` in your browser to see the React application!
