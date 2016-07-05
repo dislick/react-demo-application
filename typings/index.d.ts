@@ -7,3 +7,6 @@
 /// <reference path="globals/react-router/index.d.ts" />
 /// <reference path="globals/react/index.d.ts" />
 /// <reference path="globals/sinon/index.d.ts" />
+/// <reference path="modules/lodash/index.d.ts" />
+/// <reference path="modules/object-assign/index.d.ts" />
+/// <reference path="modules/react-redux/index.d.ts" />

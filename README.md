@@ -5,6 +5,7 @@ I wanted to try out React.js and tried to setup a somewhat realistic project. It
 - Webpack
 - TypeScript
 - ESLint
+- Redux State Container
 - Karma Unit Test Runner with Mocha
 
 ## Demonstration

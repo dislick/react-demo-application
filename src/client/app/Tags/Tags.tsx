@@ -5,36 +5,22 @@ import { SingleTagProps } from '../SingleTag/SingleTag';
 import './Tags.scss';
 import { Link } from 'react-router';
 
-interface TagsState {
-  tags: SingleTagProps[]
+interface TagsProps {
+  addTag: (title: string) => void
+  removeTag: (index: number) => void
+  reduxState: any
 }
 
-export default class Tags extends React.Component<{}, TagsState> {
-  constructor(props: any) {
+export default class Tags extends React.Component<TagsProps, {}> {
+  constructor(props: TagsProps) {
     super(props);
-    this.state = {
-      tags: [{ title: 'PatrickForPresident' }]
-    }
-  }
-
-  addTag(title: string) {
-    this.setState({
-      tags: this.state.tags.concat([{ title }])
-    });
-  }
-
-  removeTag(index: number) {
-    this.state.tags.splice(index, 1);
-    this.setState({
-      tags: this.state.tags
-    });
   }
 
   render() {
     return (
       <div>
-        <TagInput addTag={this.addTag.bind(this)} />
-        <TagList tags={this.state.tags} removeTag={this.removeTag.bind(this)} />
+        <TagInput addTag={this.props.addTag} />
+        <TagList tags={this.props.reduxState.tags} removeTag={this.props.removeTag} />
         <Link to="/about" className="about-link">About</Link>
       </div>
     );
