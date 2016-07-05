@@ -9,32 +9,30 @@ interface TagsState {
   tags: SingleTagProps[]
 }
 
-export default class Tags extends React.Component<{}, TagsState> {
-  constructor(props: any) {
+interface TagsProps {
+  addTag: (title: string) => void
+  removeTag: (index: number) => void
+  reduxState: any
+}
+
+export default class Tags extends React.Component<TagsProps, TagsState> {
+  constructor(props: TagsProps) {
     super(props);
-    this.state = {
-      tags: [{ title: 'PatrickForPresident' }]
-    }
   }
 
   addTag(title: string) {
-    this.setState({
-      tags: this.state.tags.concat([{ title }])
-    });
+    this.props.addTag(title);
   }
 
   removeTag(index: number) {
-    this.state.tags.splice(index, 1);
-    this.setState({
-      tags: this.state.tags
-    });
+    this.props.removeTag(index);
   }
 
   render() {
     return (
       <div>
         <TagInput addTag={this.addTag.bind(this)} />
-        <TagList tags={this.state.tags} removeTag={this.removeTag.bind(this)} />
+        <TagList tags={this.props.reduxState.tags} removeTag={this.removeTag.bind(this)} />
         <Link to="/about" className="about-link">About</Link>
       </div>
     );

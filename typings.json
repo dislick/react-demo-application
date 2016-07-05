@@ -9,5 +9,10 @@
     "react-router": "registry:dt/react-router#2.0.0+20160621215300",
     "react-router/history": "registry:dt/react-router/history#2.0.0+20160608102730",
     "sinon": "registry:dt/sinon#1.16.0+20160517064723"
+  },
+  "dependencies": {
+    "lodash": "registry:npm/lodash#4.0.0+20160701205107",
+    "object-assign": "registry:npm/object-assign#4.0.1+20160301180549",
+    "react-redux": "registry:npm/react-redux#4.4.0+20160614222153"
   }
 }
