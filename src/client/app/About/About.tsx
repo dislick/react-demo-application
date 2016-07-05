@@ -1,9 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 import './About.scss';
 import { Link } from 'react-router';
 
-export default class About extends React.Component {
-  constructor(props) {
+export default class About extends React.Component<{}, {}> {
+  constructor(props: any) {
     super(props);
   }
 

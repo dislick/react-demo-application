@@ -1,0 +1,13 @@
+{
+  "globalDependencies": {
+    "chai": "registry:dt/chai#3.4.0+20160601211834",
+    "enzyme": "registry:dt/enzyme#2.3.0+20160525083955",
+    "mocha": "registry:dt/mocha#2.2.5+20160619032855",
+    "react": "registry:dt/react#0.14.0+20160630100702",
+    "react-addons-test-utils": "registry:dt/react-addons-test-utils#0.14.0+20160427035638",
+    "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
+    "react-router": "registry:dt/react-router#2.0.0+20160621215300",
+    "react-router/history": "registry:dt/react-router/history#2.0.0+20160608102730",
+    "sinon": "registry:dt/sinon#1.16.0+20160517064723"
+  }
+}

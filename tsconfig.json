@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "outDir": "/dev/null",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react"
+  },
+  "files": [
+    "src/client/app/About/About.tsx",
+    "src/client/app/index.tsx",
+    "src/client/app/SingleTag/SingleTag.tsx",
+    "src/client/app/TagInput/TagInput.tsx",
+    "src/client/app/TagList/TagList.tsx",
+    "src/client/app/Tags/Tags.tsx",
+    "test/SingleTag.spec.tsx",
+    "test/TagInput.spec.tsx",
+    "typings/index.d.ts"
+  ],
+  "filesGlob": [
+    "src/client/**/*.tsx",
+    "test/**/*.tsx",
+    "typings/index.d.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
+}
