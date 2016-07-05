@@ -5,7 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/setup.js test/**/*.spec.js",
+    "test": "karma start",
     "dev": "webpack -d --watch",
     "build": "webpack -p",
     "lint": "eslint . --ext .jsx --ext .js --cache"
@@ -34,7 +34,9 @@
     "jsdom": "^9.3.0",
     "karma": "^1.1.0",
     "karma-chai": "^0.1.0",
+    "karma-jasmine": "^1.0.2",
     "karma-mocha": "^1.1.1",
+    "karma-mocha-reporter": "^2.0.4",
     "karma-phantomjs-launcher": "^1.0.1",
     "karma-sinon": "^1.0.5",
     "karma-typescript-preprocessor2": "^1.2.1",

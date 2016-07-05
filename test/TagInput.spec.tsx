@@ -18,23 +18,21 @@ describe('TagInput', function() {
       expect(tagInput.transformToHashtag('  how   are you')).to.equal('HowAreYou');
       expect(tagInput.transformToHashtag('this is a test    ')).to.equal('ThisIsATest');
     });
+  });
 
-    it('handleChange', function() {
-      const result: any = TestUtils.renderIntoDocument(
-        <TagInput />
-      );
-      result.setState = sinon.spy();
+  it('should call handleChange', function() {
+    const result: any = TestUtils.renderIntoDocument(
+      <TagInput />
+    );
+    result.setState = sinon.spy();
 
-      // const inputElement: any = TestUtils.findRenderedDOMComponentWithTag(result, 'input');
-      // inputElement.value = 'wat';
-      var event = {
-        target: {
-          value: 'wat'
-        }
-      };
-      result.handleChange(event);
+    var event = {
+      target: {
+        value: 'wat'
+      }
+    };
+    result.handleChange(event);
 
-      expect(result.setState.calledWith({ inputValue: 'wat' })).to.equal(true);
-    });
+    expect(result.setState.calledWith({ inputValue: 'wat' })).to.equal(true);
   });
 });

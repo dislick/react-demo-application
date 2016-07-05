@@ -1,5 +1,5 @@
 import * as React from 'react';
-// import './SingleTag.scss';
+import './SingleTag.scss';
 
 export interface SingleTagProps {
   title: string,
