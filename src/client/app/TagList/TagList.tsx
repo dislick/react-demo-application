@@ -4,7 +4,7 @@ import './TagList.scss';
 
 export interface TagListProps {
   tags: SingleTagProps[],
-  removeTag: () => void
+  removeTag: (index: number) => void
 }
 
 export default class TagList extends React.Component<TagListProps, {}> {

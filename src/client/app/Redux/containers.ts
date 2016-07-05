@@ -9,11 +9,11 @@ export const TagsContainer = connect(
     return {
       addTag: (title: string) => {
         let action = { title, type: 'ADD_TAG' };
-        return dispatch(action)
+        dispatch(action)
       },
       removeTag: (index: number) => {
         let action = { index, type: 'REMOVE_TAG' };
-        return dispatch(action)
+        dispatch(action)
       }
     };
   }

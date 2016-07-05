@@ -9,9 +9,9 @@ var config = {
     path: BUILD_DIR,
     filename: 'bundle.js'
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   resolve: {
-    extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+    extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
   },
   module: {
     loaders: [
@@ -25,8 +25,12 @@ var config = {
       }
     ],
     preLoaders: [
-      { test: /\.js$/, loader: "source-map-loader" }
+      { test: /\.js$/, loader: 'source-map-loader' }
     ]
+  },
+  externals: {
+    'react': 'React',
+    'react-dom': 'ReactDOM'
   }
 };
 
