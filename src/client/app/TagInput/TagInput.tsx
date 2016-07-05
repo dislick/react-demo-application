@@ -1,8 +1,16 @@
 import * as React from 'react';
 import './TagInput.scss';
 
-export default class TagInput extends React.Component<{addTag: (tagName: string) => void}, {inputValue: string}> {
-  constructor(props: any) {
+export interface TagInputProps {
+  addTag?: (tagName: string) => void
+}
+
+export interface TagInputState {
+  inputValue: string
+}
+
+export default class TagInput extends React.Component<TagInputProps, TagInputState> {
+  constructor(props: TagInputProps) {
     super(props);
     this.state = { inputValue: '' };
   }
