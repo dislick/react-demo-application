@@ -22,7 +22,7 @@ const tagsReducer = (state: State = { tags: [], tagStats: [] }, action: TagActio
   }
 
   newState.tagStats = orderBy(values(groupBy(newState.tags, 'title'))
-    .map((statArray: { title: string }[]) => {
+    .map((statArray) => {
       return { title: statArray[0].title, amount: statArray.length };
   }), ['amount'], ['desc']);
 
