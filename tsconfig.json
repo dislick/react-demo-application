@@ -21,6 +21,7 @@
     "src/client/app/Redux/tags.ts",
     "test/SingleTag.spec.tsx",
     "test/TagInput.spec.tsx",
+    "test/TagReducer.spec.tsx",
     "typings/index.d.ts"
   ],
   "filesGlob": [

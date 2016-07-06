@@ -5,8 +5,8 @@ import * as groupBy from 'lodash/groupBy';
 import { State, Action } from './state_interface';
 
 interface TagAction extends Action {
-  title: string,
-  index: number,
+  title?: string,
+  index?: number,
 }
 
 const tagsReducer = (state: State = { tags: [], tagStats: [] }, action: TagAction): State => {
