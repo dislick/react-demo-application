@@ -4,10 +4,17 @@ import { render } from 'react-dom';
 import { TagsContainer } from './Redux/containers';
 import About from './About/About';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import reducers from './Redux/reducers';
 
-let store = createStore(reducers);
+interface MyWindow extends Window {
+  devToolsExtension: any
+}
+
+declare var window: MyWindow;
+let store = createStore(reducers, compose(
+  window.devToolsExtension ? window.devToolsExtension() : f => f
+));
 
 class App extends React.Component<{}, {}> {
   render() {
