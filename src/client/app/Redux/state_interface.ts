@@ -1,5 +1,6 @@
 export interface State {
-  tags: { title: string }[]
+  tags: { title: string }[],
+  tagStats: { title: string, amount: number }[]
 }
 
 export interface Action {

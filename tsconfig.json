@@ -14,6 +14,7 @@
     "src/client/app/TagInput/TagInput.tsx",
     "src/client/app/TagList/TagList.tsx",
     "src/client/app/Tags/Tags.tsx",
+    "src/client/app/TagStats/TagStats.tsx",
     "src/client/app/Redux/containers.ts",
     "src/client/app/Redux/reducers.ts",
     "src/client/app/Redux/state_interface.ts",

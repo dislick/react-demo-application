@@ -2,6 +2,7 @@
   "globalDependencies": {
     "chai": "registry:dt/chai#3.4.0+20160601211834",
     "enzyme": "registry:dt/enzyme#2.3.0+20160525083955",
+    "lodash": "registry:dt/lodash#0.0.0+20160619033607",
     "mocha": "registry:dt/mocha#2.2.5+20160619032855",
     "react": "registry:dt/react#0.14.0+20160630100702",
     "react-addons-test-utils": "registry:dt/react-addons-test-utils#0.14.0+20160427035638",

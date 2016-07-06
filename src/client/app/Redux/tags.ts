@@ -1,4 +1,7 @@
-import * as _ from 'lodash';
+import * as cloneDeep from 'lodash/cloneDeep';
+import * as orderBy from 'lodash/orderBy';
+import * as values from 'lodash/values';
+import * as groupBy from 'lodash/groupBy';
 import { State, Action } from './state_interface';
 
 interface TagAction extends Action {
@@ -6,8 +9,8 @@ interface TagAction extends Action {
   index: number,
 }
 
-const tagsReducer = (state: State = { tags: [] }, action: TagAction): State => {
-  let newState = _.clone(state);
+const tagsReducer = (state: State = { tags: [], tagStats: [] }, action: TagAction): State => {
+  let newState = cloneDeep(state);
 
   switch (action.type) {
     case 'ADD_TAG':
@@ -17,6 +20,11 @@ const tagsReducer = (state: State = { tags: [] }, action: TagAction): State => {
       newState.tags.splice(action.index, 1);
       break;
   }
+
+  newState.tagStats = orderBy(values(groupBy(newState.tags, 'title'))
+    .map((statArray: { title: string }[]) => {
+      return { title: statArray[0].title, amount: statArray.length };
+  }), ['amount'], ['desc']);
 
   return newState;
 };
