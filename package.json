@@ -7,8 +7,7 @@
   "scripts": {
     "test": "karma start",
     "dev": "webpack -d --watch",
-    "build": "webpack -p",
-    "lint": "eslint . --ext .jsx --ext .js --cache"
+    "build": "webpack -p"
   },
   "author": "",
   "license": "ISC",
@@ -32,9 +31,6 @@
     "css-loader": "^0.23.1",
     "css-modules-require-hook": "^4.0.1",
     "enzyme": "^2.3.0",
-    "eslint": "^3.0.0",
-    "eslint-config-google": "^0.6.0",
-    "eslint-plugin-react": "^5.2.2",
     "jsdom": "^9.3.0",
     "karma": "^1.1.0",
     "karma-chai": "^0.1.0",

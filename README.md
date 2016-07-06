@@ -4,7 +4,6 @@ I wanted to try out React.js and tried to setup a somewhat realistic project. It
 
 - Webpack
 - TypeScript
-- ESLint
 - Redux State Container
 - Karma Unit Test Runner with Mocha
 
@@ -36,12 +35,6 @@ Run unit tests:
 
 ```
 npm test
-```
-
-Run ESLint:
-
-```
-npm run lint
 ```
 
 Open `src/client/index.html` in your browser to see the React application!
